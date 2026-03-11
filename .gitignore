@@ -28,6 +28,7 @@ Thumbs.db
 # Converted text files (temporary)
 *.txt
 !datasets/student/student.txt
+!requirements.txt
 
 # Jupyter notebooks
 .ipynb_checkpoints/
