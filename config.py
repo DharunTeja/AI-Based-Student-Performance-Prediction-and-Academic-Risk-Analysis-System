@@ -4,10 +4,12 @@ Contains all constants, database credentials, and application settings.
 """
 
 import os
-from dotenv import load_dotenv  # Load environment variables from .env file
-
-# Load environment variables from a .env file (for sensitive credentials)
-load_dotenv()
+# Load environment variables from a .env file (for sensitive credentials locally)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # In production (like Streamlit Cloud), environment variables are already injected
 
 # ============================================================
 # SUPABASE DATABASE CONFIGURATION
