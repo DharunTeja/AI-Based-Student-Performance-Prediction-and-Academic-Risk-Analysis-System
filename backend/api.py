@@ -82,6 +82,15 @@ def df_to_json(df):
 # API ENDPOINTS
 # ============================================================
 
+@app.route("/", methods=["GET"])
+def index():
+    """Root endpoint to verify the API is running."""
+    return jsonify({
+        "message": "🎓 EduInsight AI API is running successfully!",
+        "status": "online",
+        "docs": "Endpoints available under /api/"
+    })
+
 @app.route("/api/status", methods=["GET"])
 def get_status():
     """Check system status: model trained? dataset available?"""
