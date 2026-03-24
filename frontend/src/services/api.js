@@ -4,7 +4,7 @@
 import axios from "axios";
 
 // Use environment variable for API URL in production, or fallback to local dev server
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "https://eduinsight-ai-7oex.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_BASE,
